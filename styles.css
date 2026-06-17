@@ -161,6 +161,32 @@ ul { list-style: none; }
 }
 .hero__photo-initials { font-family: 'Unbounded'; font-size: 56px; font-weight: 800; opacity: 0.6; }
 .hero__photo-hint { font-size: 12px; color: var(--muted-soft); }
+
+/* Реальное фото Ярослава как часть дизайна */
+.hero__photo--filled {
+  background-image: url('assets/yaroslav-hero.jpg');
+  background-size: cover;
+  background-position: 50% 32%;
+  position: relative;
+}
+.hero__photo-overlay {
+  position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(12,14,20,0) 45%, rgba(12,14,20,0.55) 100%),
+    linear-gradient(120deg, rgba(108,92,231,0.18), rgba(0,212,255,0.12));
+  mix-blend-mode: normal;
+}
+.trust__photo.trust__photo--filled {
+  background-image: url('assets/yaroslav-hero.jpg');
+  background-size: cover;
+  background-position: 50% 28%;
+  position: relative;
+}
+.trust__photo--filled .hero__photo-overlay {
+  background:
+    linear-gradient(180deg, rgba(12,14,20,0) 55%, rgba(12,14,20,0.45) 100%),
+    linear-gradient(160deg, rgba(108,92,231,0.14), rgba(0,212,255,0.08) 60%);
+}
 .hero__chip {
   position: absolute; background: rgba(22,26,38,0.85); backdrop-filter: blur(12px);
   border: 1px solid var(--border-strong); border-radius: 16px; padding: 12px 16px;
